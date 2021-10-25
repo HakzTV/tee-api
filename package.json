@@ -1,0 +1,26 @@
+{
+  "name": "tee-api",
+  "version": "1.0.0",
+  "description": "Simple API that has fun facts about Me",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HakzTV/tee-api.git"
+  },
+  "author": "Telvin Varfley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HakzTV/tee-api/issues"
+  },
+  "homepage": "https://github.com/HakzTV/tee-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14"
+  }
+}
