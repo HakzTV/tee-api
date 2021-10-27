@@ -58,6 +58,17 @@ app.route('/facts')
         }
     })
 });
+
+app.route('/facts/:category')
+.get(function(req,res){
+        Fact.findOne({category: req.params.category}, function(err, foundCategory){
+            if(foundCategory){
+                res.send(foundCategory)
+            }else{
+                res.send("No Category was found")
+            }
+        })  
+})
 // Port
 app.listen(port, ()=>{
     console.log("Server has successfully started")
