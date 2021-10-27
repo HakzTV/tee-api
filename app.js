@@ -65,10 +65,26 @@ app.route('/facts/:category')
             if(foundCategory){
                 res.send(foundCategory)
             }else{
-                res.send("No Category was found")
+                res.send("No author was found")
             }
         })  
 })
+// Patch
+.put(function(req,res){
+    Fact.replaceOne(
+        {category: req.params.category},
+        {category: req.body.category, content: req.body.content, author: req.body.author}, 
+        {overwrite: true}, 
+        function(err){
+            if(!err){
+                res.send("Successfully updated fact")
+            }else{
+                console.log(err)
+            }
+        }
+    );
+})
+.p
 // Port
 app.listen(port, ()=>{
     console.log("Server has successfully started")
